@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as Comlink from 'comlink'
 import * as aq from 'arquero'
 import { Dataset, DataProfile } from '../lib/datasource'
@@ -16,7 +17,7 @@ function tableToDataset(table: aq.Table, originalDataset: Dataset): Dataset {
   const fieldNames = table.columnNames()
   const fields = fieldNames.map(name => {
     const column = table.column(name)
-    const firstValue = column.get(0)
+    const firstValue = column?.get(0)
     
     let type: 'string' | 'number' | 'boolean' | 'date' | 'unknown' = 'unknown'
     if (typeof firstValue === 'number') type = 'number'

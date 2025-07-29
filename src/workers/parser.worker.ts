@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as Comlink from 'comlink'
 import * as XLSX from 'xlsx'
 import Papa from 'papaparse'

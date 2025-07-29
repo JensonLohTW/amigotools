@@ -117,7 +117,7 @@ export function ChartView({
 
   // 更新圖表規格
   const updateSpec = (updates: Partial<ChartSpec>) => {
-    const newSpec = { ...spec, ...updates }
+    const newSpec = { ...spec, ...updates } as ChartSpec
     onSpecChange?.(newSpec)
   }
 

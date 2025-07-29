@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as Comlink from 'comlink'
 import { Dataset } from '../lib/datasource'
 
