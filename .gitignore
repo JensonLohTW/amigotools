@@ -39,3 +39,95 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ===== 數據分析項目專用規則 =====
+
+# 敏感數據文件 - 絕對不上傳
+/data/*.xlsx
+/data/*.xls
+/data/*.csv
+/data/~$*
+/data/*.tmp
+/data/raw/
+/data/sensitive/
+/data/personal/
+
+# 大型分析輸出文件 - 選擇性上傳
+/analysis_outputs/*.png
+/analysis_outputs/*.jpg
+/analysis_outputs/*.pdf
+/analysis_outputs/large_datasets/
+/analysis_outputs/temp/
+
+# Python 數據分析相關
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.ipynb_checkpoints/
+*.ipynb
+
+# R 數據分析相關
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# 機器學習模型文件
+/models/*.pkl
+/models/*.joblib
+/models/*.h5
+/models/*.pb
+/models/checkpoints/
+
+# 臨時分析文件
+/temp/
+/tmp/
+*.tmp
+*.temp
+*~
+
+# 系統生成的縮圖和預覽
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE 和編輯器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日誌文件
+*.log
+logs/
+
+# 備份文件
+*.bak
+*.backup
+*.old
+
+# 壓縮文件（通常包含原始數據）
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tgz
+
+# 數據庫文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 配置文件中的敏感信息
+config/local.json
+config/production.json
+secrets.json
